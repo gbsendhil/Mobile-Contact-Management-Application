@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MCM</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_stars">%d \nStars</string>
+    <string name="text_watchers">%d \nWatchers</string>
+    <string name="text_forks">%d \nForks</string>
+    <string name="error_loading_contacts">Oops, something went wrong</string>
+    <string name="text_empty_contacts">This service doesn\'t have any public contact</string>
+    <string name="default_info_message">Fetching the Contacts</string>
 </resources>

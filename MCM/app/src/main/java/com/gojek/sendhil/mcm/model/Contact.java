@@ -4,14 +4,9 @@ package com.gojek.sendhil.mcm.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Contact VO
- */
 public class Contact implements Parcelable {
-
     @SerializedName("id")
     private Integer id;
     @SerializedName("first_name")
@@ -144,5 +139,8 @@ public class Contact implements Parcelable {
         }
     };
 
+    public Contact(){
 
+    }
 }
+

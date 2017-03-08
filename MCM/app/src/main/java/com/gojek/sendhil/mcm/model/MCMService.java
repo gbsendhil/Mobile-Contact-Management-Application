@@ -9,10 +9,9 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
-import retrofit2.http.Url;
 import rx.Observable;
 
-public interface ContactService {
+public interface MCMService {
 
     @GET("contacts.json")
     Observable<List<Contact>> listContacts();
@@ -24,13 +23,13 @@ public interface ContactService {
     Observable<Contact> createContact(@Body Contact contact);
 
     class Factory {
-        public static ContactService create() {
+        public static MCMService create() {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://gojek-contacts-app.herokuapp.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
-            return retrofit.create(ContactService.class);
+            return retrofit.create(MCMService.class);
         }
     }
 }
