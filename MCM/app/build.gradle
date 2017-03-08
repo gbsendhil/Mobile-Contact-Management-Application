@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -38,4 +43,9 @@ dependencies {
     compile dependencies.picasso
     compile dependencies.rxAndroid
     compile dependencies.dagger
+    compile dependencies.circleImageView
+
+    testCompile dependencies.jUnit
+    testCompile dependencies.mockito
+    testCompile dependencies.robolectric
 }
